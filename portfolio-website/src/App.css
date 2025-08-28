@@ -1,0 +1,15 @@
+/* specific styles */
+#root {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+
+   a {
+    padding-left: 1rem;
+   }
+}
