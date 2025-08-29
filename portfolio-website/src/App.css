@@ -1,8 +1,14 @@
 /* specific styles */
 #root {
-  max-width: 80%;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav {
@@ -12,4 +18,38 @@ nav {
    a {
     padding-left: 1rem;
    }
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.nav-link:hover {
+  text-decoration-thickness: 900;
+}
+
+iframe {
+  width: 80%;
+  height: 300px;
+}
+
+.highlight {
+  color: var(--secondary-color)
+}
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(0.25turn, var(--secondary-bg-color), var(--primary-color)), url('assets/noise.svg');
+
+  #blurb {
+    width: 50%;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
 }
