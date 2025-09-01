@@ -11,6 +11,11 @@
   --text-color: white;
   --primary-color: #D0B7E5;
   --secondary-color: #57E3FF;
+
+  /* spacing */
+  --gap-default: 3rem;
+  --gap-sm: 5px;
+  --gap-med: 1rem;
 }
 
 body {
@@ -48,4 +53,8 @@ h1 {
 
 h2{
   font-weight: 500;
+}
+
+section, footer {
+  margin-top: var(--gap-default);
 }

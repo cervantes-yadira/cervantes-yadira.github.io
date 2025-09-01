@@ -6,10 +6,11 @@
     <filter id='noise' x='0' y='0'>
             <feTurbulence
               type='fractalNoise'
-              baseFrequency='0.75'
-              numOctaves='6'
+              baseFrequency='0.55'
+              numOctaves='6' 
               stitchTiles='stitch'/>
     </filter>
 
+    <rect width='300' height='300' fill='#2A2137'/>
     <rect width='300' height='300' filter="url(#noise)" opacity='1'/>
 </svg>

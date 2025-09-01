@@ -1,6 +1,36 @@
 import './App.css'
+import PillList from './components/PillList'
+import ProjectCard from './components/ProjectCard'
 
 function App() {
+
+  //TODO extract to separate file
+  const skills = [
+    {
+      text: 'HTML',
+      className: 'purple'
+    },
+    {
+      text: 'CSS',
+      className: 'purple'
+    },
+        {
+      text: 'JavaScript',
+      className: 'purple'
+    },
+        {
+      text: 'React',
+      className: 'purple'
+    },
+        {
+      text: 'REST',
+      className: 'blue'
+    },
+    {
+      text: 'Agile',
+      className: 'blue'
+    }
+  ]
 
   return (
     <>
@@ -15,7 +45,7 @@ function App() {
         </nav>
       </div>
       <section id='hero'>
-        <div class='container'>
+        <div>
           <div id='blurb'>
             <h1>
               Hello! I'm <span class='highlight'> Yadira.</span>
@@ -28,33 +58,33 @@ function App() {
           <img></img>
         </div>
       </section>
-      <section>
+      <section id='about'>
         <div>       
-          <h2>A bit about me...</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
-            adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
-            adipiscing elit quisque faucibus.
-          </p>
-        </div>
-        <div>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>REST</li>
-            <li>Agile</li>
-          </ul>
-          <h2>And my skills!</h2>
-        </div>
+            <h2>A bit about me<span class='highlight'>...</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            </p>
+          </div>
+          <div id='skills'>
+            <div>
+              <PillList items={skills}/>
+              <h2>And my skills!</h2>
+            </div>
+          </div>
       </section>
       <section>
         <h2>Projects</h2>
-        <div><img></img></div>
-        <div><img></img></div>
-        <div><img></img></div>
-        <div><img></img></div>
+        <ProjectCard src='portfolio-website.png' alt='' href='#'/>
+        <ProjectCard src='#' alt='' />
+        <ProjectCard src='#' alt='' />
+        <ProjectCard src='#' alt='' />
       </section>
       <section>
         <h2>Resume</h2>
