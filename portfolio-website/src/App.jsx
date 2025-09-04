@@ -1,6 +1,6 @@
 import './App.css'
 import PillList from './components/PillList'
-import ProjectCard from './components/ProjectCard'
+import ProjectList from './components/ProjectList'
 
 function App() {
 
@@ -29,6 +29,73 @@ function App() {
     {
       text: 'Agile',
       className: 'blue'
+    }
+  ]
+
+  const projects = [
+    {
+      title: 'Portfolio Website',
+      text: `
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            `,
+      href: '#',
+      src: 'portfolio-website.png',
+      alt: '',
+      github: 'https://github.com/cervantes-yadira/cervantes-yadira.github.io.git',
+      isReverse: ''
+    },
+        {
+      title: 'Forestry Club Hour Tracker',
+      text: `
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            `,
+      href: '#',
+      src: 'portfolio-website.png',
+      alt: '',
+      github: 'https://github.com/cervantes-yadira/cervantes-yadira.github.io.git',
+      isReverse: 'reverse'
+    },
+        {
+      title: 'Portfolio Website',
+      text: `
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            `,
+      href: '#',
+      src: 'portfolio-website.png',
+      alt: '',
+      github: 'https://github.com/cervantes-yadira/cervantes-yadira.github.io.git',
+      isReverse: ''
+    },
+        {
+      title: 'Portfolio Website',
+      text: `
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
+              adipiscing elit quisque faucibus.
+            `,
+      href: '#',
+      src: 'portfolio-website.png',
+      alt: '',
+      github: 'https://github.com/cervantes-yadira/cervantes-yadira.github.io.git',
+      isReverse: 'reverse'
     }
   ]
 
@@ -79,12 +146,9 @@ function App() {
             </div>
           </div>
       </section>
-      <section>
+      <section id='projects'>
         <h2>Projects</h2>
-        <ProjectCard src='portfolio-website.png' alt='' href='#'/>
-        <ProjectCard src='#' alt='' />
-        <ProjectCard src='#' alt='' />
-        <ProjectCard src='#' alt='' />
+        <ProjectList projects={projects} />
       </section>
       <section>
         <h2>Resume</h2>

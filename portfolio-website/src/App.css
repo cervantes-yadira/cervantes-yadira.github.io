@@ -18,7 +18,7 @@ nav {
 
 .nav-link {
   font-weight: 500;
-  font-size: x-large;
+  font-size: large;
 }
 
 .nav-link:hover {
@@ -88,11 +88,40 @@ nav {
 
 /* project section */
 .project {
-  width: 50%;
-
+  position: relative;
+  
   img {
-    
+    width: 100%;
+    border-radius: 10px;
   }
+
+  .project-links {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    a img {
+      width: 30px;
+      height: auto;
+    }
+  }
+}
+
+.project-row {
+  display: flex;
+  gap: var(--gap-default);
+
+  .row-item {
+    width: 50%;
+
+      h3 {
+      margin-top: 0;
+      }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 /* resume section */
