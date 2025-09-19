@@ -6,7 +6,7 @@ export default function PillList({items}) {
     )
     
     return (
-        <ul className='pill-list'>
+        <ul className='pill-list flex'>
             {list}
         </ul>
     )

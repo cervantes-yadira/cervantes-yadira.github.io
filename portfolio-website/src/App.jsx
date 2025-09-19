@@ -5,17 +5,19 @@ import projects from './assets/projects'
 import skills from './assets/skills'
 import navLinks from './assets/navLinks'
 import NavList from './components/NavList'
+import ContactForm from './components/ContactForm'
 
 function App() {
   return (
     <>
-      <div class='navbar'>
+      <div class='navbar flex flex-btwn mx-lg'>
         <div>
-          <img alt='Logo'></img>
+          {/* <img alt='Logo'></img> */}
+          <h2 className='logo'>Yadira C.</h2>
         </div>
         <NavList links={navLinks} />
       </div>
-      <section id='hero'>
+      <section id='hero' className='flex flex-btwn px-lg'>
         <div>
           <div id='blurb'>
             <h1>
@@ -29,7 +31,7 @@ function App() {
           <img></img>
         </div>
       </section>
-      <section id='about'>
+      <section id='about' class='flex flex-btwn'>
         <div>       
             <h2>A bit about me<span class='highlight'>...</span></h2>
             <p>
@@ -44,33 +46,22 @@ function App() {
             </p>
           </div>
           <div id='skills'>
-              <PillList items={skills}/>
-              <h2>And my skills!</h2>
+              <PillList items={skills} />
+              <h2>And my skills<span className='highlight'>!</span></h2>
           </div>
       </section>
-      <section id='projects'>
+      <section id='projects' className='mx-lg'>
         <h2>Projects</h2>
         <ProjectList projects={projects} />
       </section>
-      <section>
+      <section id='resume' className='mx-lg'>
         <h2>Resume</h2>
         <iframe src="https://docs.google.com/document/d/e/2PACX-1vR5oiR7JLCcDrb7SxgndsKMhw9ztx3It_3Y01EBHRuhpO55ElAWIhEUAjLboYQnEwINt5NAK9312uU0/pub?embedded=true"></iframe>
       </section>
-      <footer>
+      <footer id='contact' className='px-lg'>
         <h2>Get in touch<span className='highlight'>!</span></h2>
-        <div>
-          <form>
-            <label for='name'>Name</label>
-            <input id='name' type='text' placeholder='Name'></input>
-
-            <label for='email'>Email</label>
-            <input id='email' type='email' placeholder='Email'></input>
-
-            <label for='message'>Message</label>
-            <textarea id='message' rows={6} placeholder='Message'></textarea>
-
-            <button type='button'>Send!</button>
-          </form>
+        <div className='flex flex-btwn'>
+          <ContactForm />
           <div>
             <ul>
               <li><a href='https://github.com/cervantes-yadira'>GitHub</a></li>

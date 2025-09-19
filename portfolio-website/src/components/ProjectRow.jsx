@@ -5,7 +5,7 @@ export default function ProjectRow({ project }) {
     const {isReverse, title, text, skills} = project
 
     return (
-        <div className={`project-row ${isReverse}`}>
+        <div className={`row flex flex-btwn ${isReverse}`}>
             <div className='row-item'>
                 <ProjectCard project={project} />
             </div>

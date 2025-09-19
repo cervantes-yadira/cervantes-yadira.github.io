@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
 
-  font-family: "STIX Two Text", serif;
+  font-family: "STIX Two Text", "Times New Roman", Times, serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,9 +25,22 @@
   --secondary-color: #57E3FF;
 
   /* spacing */
-  --gap-default: 3rem;
   --gap-sm: 5px;
-  --gap-med: 1rem;
+  --gap-md: 1rem;
+  --margin-lg: 8rem;
+  --margin-md: 4rem;
+  --margin-sm: 2rem;
+  --padding-lg: 8rem;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --gap-md: 1rem;
+    --margin-lg: 4rem;
+    --margin-md: 2rem;
+    --margin-sm: 0.5rem;
+    --padding-lg: 4rem;
+  }
 }
 
 body {
@@ -44,11 +57,10 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
-  text-decoration-thickness: 700;
 }
 
-h1, h2, h3, a {
-  font-family: "REM", sans-serif;
+h1, h2, h3, a, li {
+  font-family: "REM", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
   text-align: left;
 }
@@ -62,15 +74,11 @@ h2{
 }
 
 section, footer {
-  margin-top: var(--gap-default);
+  margin-top: var(--margin-md);
 }
 
 img {
   max-width: 100%;
   padding: 0;
   margin: 0;
-}
-
-li {
-  font-family: "REM", sans-serif;
 }
