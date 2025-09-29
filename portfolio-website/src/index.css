@@ -21,7 +21,9 @@
   --primary-bg-color: #2A2137;
   --secondary-bg-color: #413553;
   --text-color: white;
+  --text-hover-color: #e6e6e6;
   --primary-color: #D0B7E5;
+  --primary-highlight-color: #e8d5f8;
   --secondary-color: #57E3FF;
 
   /* spacing */
@@ -30,7 +32,10 @@
   --margin-lg: 8rem;
   --margin-md: 4rem;
   --margin-sm: 2rem;
+  --margin-xsm: 7px;
   --padding-lg: 8rem;
+  --padding-sm: 2rem;
+  --padding-xsm: 5px;
 }
 
 @media screen and (max-width: 900px) {
@@ -57,12 +62,12 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
+  color: var(--text-hover-color);
 }
 
-h1, h2, h3, a, li {
+h1, h2, h3, h4, h5, h6, a, li, label, input, textarea, button {
   font-family: "REM", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
-  text-align: left;
 }
 
 h1 {
@@ -81,4 +86,15 @@ img {
   max-width: 100%;
   padding: 0;
   margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  width: 3px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
 }

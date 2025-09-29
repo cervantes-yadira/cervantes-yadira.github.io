@@ -6,18 +6,19 @@ import skills from './assets/skills'
 import navLinks from './assets/navLinks'
 import NavList from './components/NavList'
 import ContactForm from './components/ContactForm'
+import SocialList from './components/SocialList'
+import socials from './assets/socials'
 
 function App() {
   return (
     <>
       <div class='navbar flex flex-btwn mx-lg'>
         <div>
-          {/* <img alt='Logo'></img> */}
           <h2 className='logo'>Yadira C.</h2>
         </div>
         <NavList links={navLinks} />
       </div>
-      <section id='hero' className='flex flex-btwn px-lg'>
+      <section id='hero' className='flex flex-btwn'>
         <div>
           <div id='blurb'>
             <h1>
@@ -30,6 +31,7 @@ function App() {
           </div>
           <img></img>
         </div>
+        <SocialList className={'social-tab'} socials={socials} isTab={true} />
       </section>
       <section id='about' class='flex flex-btwn'>
         <div>       
@@ -60,15 +62,12 @@ function App() {
       </section>
       <footer id='contact' className='px-lg'>
         <h2>Get in touch<span className='highlight'>!</span></h2>
-        <div className='flex flex-btwn'>
+        <div className='footer-grid'>
           <ContactForm />
+          <hr/>
           <div>
-            <ul>
-              <li><a href='https://github.com/cervantes-yadira'>GitHub</a></li>
-              <li><a href='https://linkedin.com/in/yadira-cervantes'>LinkedIn</a></li>
-              <li><a href='mailto:ycervantes0629@gmail.com'>Gmail</a></li>
-            </ul>
-            <h4>Built by <span className='highlight'>Yadira Cervantes</span></h4>
+              <SocialList className={'social-list'} socials={socials} isTab={false}/>
+              <h4>Built by <span className='highlight'>Yadira Cervantes</span></h4>
           </div>
         </div>
       </footer>

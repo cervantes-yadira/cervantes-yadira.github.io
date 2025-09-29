@@ -7,15 +7,19 @@ const skills = [
     text: 'CSS',
     className: 'purple'
   },
-      {
+  {
     text: 'JavaScript',
     className: 'purple'
   },
-      {
+  {
     text: 'React',
     className: 'purple'
   },
-      {
+  {
+    text:'Node.js',
+    className: 'purple'
+  },
+  {
     text: 'REST',
     className: 'blue'
   },
