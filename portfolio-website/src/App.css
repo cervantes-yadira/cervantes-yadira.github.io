@@ -69,7 +69,7 @@ nav {
   margin-left: var(--margin-lg);
 
   div {
-    max-width: 48%;
+    width: 48%;
   }
 }
 
@@ -79,6 +79,12 @@ nav {
   border-bottom-left-radius: 25px;
   padding-right: var(--padding-lg);
   box-sizing: border-box;
+
+  .skill-wrapper {
+    width: 100%;
+    padding: 0 var(--padding-sm);
+  }
+
 }
 
 .pill-list {
@@ -94,15 +100,11 @@ nav {
   border-radius: 15px;
 }
 
-.purple {
-  background-color: var(--primary-color);
-}
-
-.blue {
-  background-color: var(--secondary-color);
-}
-
 /* project section */
+.project-list div:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
 .project-card {
   position: relative;
   box-sizing: border-box;
@@ -133,8 +135,9 @@ nav {
     width: 48%;
   }
 
-  h3 {
+  h4 {
     margin-top: 0;
+
   }
 }
 
@@ -149,7 +152,6 @@ iframe {
 }
 
 /* footer */
-
 .footer-grid {
   width: 100%;
   display: grid;
@@ -251,12 +253,24 @@ footer {
   flex-wrap: wrap;
 }
 
-.reverse {
-  flex-direction: row-reverse;
+.flex-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.purple {
+  background-color: var(--primary-color);
+}
+
+.blue {
+  background-color: var(--secondary-color);
 }
 
 /* responsive styles */

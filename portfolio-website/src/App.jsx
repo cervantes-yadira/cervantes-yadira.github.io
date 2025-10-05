@@ -8,6 +8,7 @@ import NavList from './components/NavList'
 import ContactForm from './components/ContactForm'
 import SocialList from './components/SocialList'
 import socials from './assets/socials'
+import SocialTab from './components/SocialTab'
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           </div>
           <img></img>
         </div>
-        <SocialList className={'social-tab'} socials={socials} isTab={true} />
+        <SocialTab socials={socials} />
       </section>
       <section id='about' class='flex flex-btwn'>
         <div>       
@@ -47,9 +48,11 @@ function App() {
               adipiscing elit quisque faucibus.
             </p>
           </div>
-          <div id='skills'>
-              <PillList items={skills} />
+          <div id='skills' className='flex flex-center align-center'>
+            <div className='skill-wrapper'>
+              <PillList items={skills} className='flex-center' />
               <h2>And my skills<span className='highlight'>!</span></h2>
+            </div>
           </div>
       </section>
       <section id='projects' className='mx-lg'>
@@ -66,8 +69,8 @@ function App() {
           <ContactForm />
           <hr/>
           <div>
-              <SocialList className={'social-list'} socials={socials} isTab={false}/>
-              <h4>Built by <span className='highlight'>Yadira Cervantes</span></h4>
+            <SocialList socials={socials} />
+            <h4>Built by <span className='highlight'>Yadira Cervantes</span></h4>
           </div>
         </div>
       </footer>
