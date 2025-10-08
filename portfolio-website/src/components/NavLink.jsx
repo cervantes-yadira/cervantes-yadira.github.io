@@ -1,7 +1,7 @@
-export default function NavLink({href, label}) {
+export default function NavLink({ href, label }) {
   return (
-    <>
-      <a className="nav-link" href={href}>{label}</a>
-    </>
-  )
+    <a className="nav-link" href={href}>
+      {label}
+    </a>
+  );
 }

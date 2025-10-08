@@ -7,24 +7,28 @@
   flex-wrap: wrap;
   box-sizing: border-box;
 
-  font-family: "STIX Two Text", "Times New Roman", Times, serif;
+  font-family: var(--primary-font-family);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-break: break-all;
+
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
 
   background-color: var(--primary-bg-color);
   color: var(--text-color);
 
   /* color palette */
-  --primary-bg-color: #2A2137;
+  --primary-bg-color: #2a2137;
   --secondary-bg-color: #413553;
   --text-color: white;
   --text-hover-color: #e6e6e6;
-  --primary-color: #D0B7E5;
+  --primary-color: #d0b7e5;
   --primary-highlight-color: #e8d5f8;
-  --secondary-color: #57E3FF;
+  --secondary-color: #57e3ff;
 
   /* spacing */
   --gap-sm: 5px;
@@ -36,6 +40,10 @@
   --padding-lg: 8rem;
   --padding-sm: 2rem;
   --padding-xsm: 5px;
+
+  /* font */
+  --primary-font-family: "STIX Two Text", "Times New Roman", Times, serif;
+  --secondary-font-family: "REM", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 900px) {
@@ -56,17 +64,26 @@ a {
   color: var(--text-color);
   font-weight: 500;
   text-decoration: inherit;
+  position: relative;
 }
 
 a:hover {
   cursor: pointer;
-  text-decoration: underline;
-  text-decoration-color: var(--secondary-color);
-  color: var(--text-hover-color);
 }
 
-h1, h2, h3, h4, h5, h6, a, li, label, input, textarea, button {
-  font-family: "REM", Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+label,
+input,
+textarea,
+button {
+  font-family: var(--secondary-font-family);
   font-optical-sizing: auto;
 }
 
@@ -74,11 +91,12 @@ h1 {
   font-weight: 700;
 }
 
-h2{
+h2 {
   font-weight: 500;
 }
 
-section, footer {
+section,
+footer {
   margin-top: var(--margin-md);
 }
 

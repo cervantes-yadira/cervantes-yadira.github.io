@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+package-lock.json
+package.json
+
+# Ignore automatically generated files
+*.min.js
+*.min.css

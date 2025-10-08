@@ -1,14 +1,7 @@
-import ProjectRow from "./ProjectRow"
+import ProjectRow from "./ProjectRow";
 
 export default function ProjectList({ projects }) {
-    // console.log(projects)
-    const list = projects.map(project => 
-        <ProjectRow project={project}  />
-    )
+  const list = projects.map((project) => <ProjectRow project={project} />);
 
-    return (
-        <div className='project-list'>
-            {list}
-        </div>
-    )
+  return <div className="project-list">{list}</div>;
 }

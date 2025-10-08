@@ -1,32 +1,58 @@
 /* nav */
+nav {
+  justify-content: end;
+  gap: var(--gap-md);
+}
+
 .navbar {
   padding: 1rem 0;
 }
 
 .logo {
-  font-family: "STIX Two Text", "Times New Roman", Times, serif;
+  font-family: var(--primary-font-family);
   font-weight: bolder;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-nav {
-  justify-content: end;
-  gap: var(--gap-md)
-}
-
 .nav-link {
-  color: white;
-  font-weight: 500;
+  color: var(--text-color);
   font-size: large;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 .nav-link:hover {
+  animation-name: highlightBg;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   text-decoration-thickness: 900;
 }
 
-.highlight {
-  color: var(--secondary-color)
+.nav-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 2px;
+  bottom: 7px;
+  left: auto;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+@keyframes highlightBg {
+  from {
+    background-color: var(--primary-bg-color);
+  }
+  to {
+    background-color: var(--secondary-bg-color);
+  }
 }
 
 /* hero section */
@@ -35,7 +61,8 @@ nav {
   padding-left: var(--padding-lg);
   align-items: center;
   height: 400px;
-  background: linear-gradient(0.25turn, #413553cc, #d0b7e5c5), url('assets/noise.svg');
+  background:
+    linear-gradient(0.25turn, #413553cc, #d0b7e5c5), url("assets/noise.svg");
   box-sizing: border-box;
 
   p {
@@ -44,6 +71,10 @@ nav {
 
   #blurb {
     max-width: 50%;
+
+    h1 {
+      width: max-content;
+    }
   }
 }
 
@@ -74,7 +105,8 @@ nav {
 }
 
 #skills {
-  background: linear-gradient(00.25turn, #917da6da, #413553cc), url('assets/noise.svg');
+  background:
+    linear-gradient(00.25turn, #917da6da, #413553cc), url("assets/noise.svg");
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   padding-right: var(--padding-lg);
@@ -84,7 +116,6 @@ nav {
     width: 100%;
     padding: 0 var(--padding-sm);
   }
-
 }
 
 .pill-list {
@@ -137,7 +168,6 @@ nav {
 
   h4 {
     margin-top: 0;
-
   }
 }
 
@@ -176,14 +206,17 @@ footer {
       margin-bottom: var(--margin-xsm);
     }
 
-    input, textarea {
+    input,
+    textarea {
       background-color: var(--primary-bg-color);
       border: solid 2px transparent;
       color: var(--text-color);
       resize: none;
     }
 
-    input, textarea, button {
+    input,
+    textarea,
+    button {
       width: 60%;
       border-radius: 10px;
       box-sizing: border-box;
@@ -191,7 +224,10 @@ footer {
       font-size: small;
     }
 
-    input:hover, textarea:hover, input:focus, textarea:focus {
+    input:hover,
+    textarea:hover,
+    input:focus,
+    textarea:focus {
       border: solid 2px var(--primary-color);
       box-shadow: 3px 3px 8px var(--primary-color);
       outline: none;
@@ -216,13 +252,13 @@ footer {
 
 .social-list {
   padding-left: 0;
-  
+
   li {
     padding: 10px;
     display: flex;
     align-items: center;
     gap: var(--gap-sm);
-  } 
+  }
 }
 
 /* utility classes */
@@ -265,6 +301,10 @@ footer {
   font-weight: bold;
 }
 
+.highlight {
+  color: var(--secondary-color);
+}
+
 .purple {
   background-color: var(--primary-color);
 }
@@ -283,5 +323,4 @@ footer {
       width: 100%;
     }
   }
-
 }
