@@ -44,7 +44,7 @@ const projects = [
             adipiscing elit quisque faucibus.
           `,
     href: "#",
-    src: "portfolio-website.png",
+    src: "forestry-club-website.png",
     alt: "",
     github:
       "https://github.com/cervantes-yadira/cervantes-yadira.github.io.git",

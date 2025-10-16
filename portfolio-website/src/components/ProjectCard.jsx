@@ -5,14 +5,10 @@ export default function ProjectCard({ project }) {
       <img src={src} alt={alt} className="project-img"></img>
       <div className="project-links">
         <a href={href ? href : "#"}>
-          <img></img>
+          <img className="" src="link-solid-full.svg" alt=""></img>
         </a>
         <a href={github}>
-          <img
-            className="icon"
-            src="github-mark-white.png"
-            alt="GitHub logo"
-          ></img>
+          <img className="" src="github-mark-white.png" alt="GitHub logo"></img>
         </a>
       </div>
     </div>

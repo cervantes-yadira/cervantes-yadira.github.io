@@ -21,6 +21,8 @@
   background-color: var(--primary-bg-color);
   color: var(--text-color);
 
+  scroll-behavior: smooth;
+
   /* color palette */
   --primary-bg-color: #2a2137;
   --secondary-bg-color: #413553;
@@ -97,6 +99,7 @@ h2 {
 
 section,
 footer {
+  scroll-margin-top: var(--margin-md);
   margin-top: var(--margin-md);
 }
 
