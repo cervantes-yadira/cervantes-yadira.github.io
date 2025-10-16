@@ -43,7 +43,6 @@ const projects = [
             adipiscing elit quisque faucibus. Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur
             adipiscing elit quisque faucibus.
           `,
-    href: "#",
     src: "forestry-club-website.png",
     alt: "",
     github:
